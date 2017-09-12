@@ -1,2 +1,3 @@
 build/
 logs2BigQuery/node_modules
+logs2BigQuery/engineering-metrics*
