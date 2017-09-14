@@ -1,7 +1,0 @@
-{
-  "name": "logs2BigQuery-lambda",
-  "version": "0.0.1",
-  "dependencies": {
-    "@google-cloud/bigquery": "latest",
-  }
-}
