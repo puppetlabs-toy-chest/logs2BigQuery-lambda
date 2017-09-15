@@ -10,6 +10,12 @@ To create a new configuration for the lambda copy config.example.json to config.
 cp config.example.json config.json
 ```
 
+The Lambda will also require GCP service account credentials so it can write data into BigQuery. If this is a first time setup then a service account must be created in
+the appropriate GCP project. Follow [this](https://cloud.google.com/iam/docs/service-accounts) guide on how to create service accounts in GCP. Once created, it should
+have the role "BigQuery Data Editor". The JSON credentials should be placed in the build directory so they get built into the Lambda. The environment variable
+`GOOGLE_APPLICATION_CREDENTIALS` should contain the value of the path where the credentials are stored. Follow [this](http://docs.aws.amazon.com/lambda/latest/dg/env_variables.html)
+guide for information on how to configure a Lambda functions environment variables.
+
 # Building
 Create a virtualenv in the project directory and run the build script. It will produce as zip file that you will then upload to AWS.
 ```
